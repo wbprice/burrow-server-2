@@ -1,3 +1,8 @@
 node_modules
 coverage
+.tmp/*
 
+# Ignore Vim temporary files.
+*~
+*.swp
+*.swo

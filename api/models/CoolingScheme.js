@@ -8,7 +8,11 @@ const Model = require('trails-model')
  */
 module.exports = class CoolingScheme extends Model {
 
-  static config (app, Sequelize) {
+  static config () {
+
+  }
+
+  static schema (app, Sequelize) {
     return {
       name: {
         type: Sequelize.STRING,
@@ -17,7 +21,4 @@ module.exports = class CoolingScheme extends Model {
     }
   }
 
-  static schema () {
-
-  }
 }

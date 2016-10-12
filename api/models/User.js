@@ -8,20 +8,21 @@ const Model = require('trails-model')
  */
 module.exports = class User extends Model {
 
-  static config (app, Sequelize) {
+  static config () {
+
+  }
+
+  static schema (app, Sequelize) {
     return {
       name: {
         type: Sequelize.STRING,
         allowNull: false
       },
-      password: {
+      emailAddress: {
         type: Sequelize.STRING,
         allowNull: false
       }
     }
   }
 
-  static schema () {
-
-  }
 }

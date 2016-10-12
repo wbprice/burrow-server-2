@@ -11,7 +11,17 @@ module.exports = class Login extends Model {
   static config () {
   }
 
-  static schema () {
-
+  static schema (app, Sequelize) {
+    return {
+      emailAddress: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      password: {
+        type: Sequelize.STRING,
+        allowNull: false
+      }
+    }
   }
+
 }
