@@ -3,18 +3,17 @@
 const Model = require('trails-model')
 
 /**
- * @module User
- * @description Model for containing information about a given user.
+ * @module CoolingProfile
+ * @description Model for containing information about a cooling profile.
  */
-module.exports = class User extends Model {
+module.exports = class CoolingProfile extends Model {
 
   static config () {
     return {
       options: {
         classMethods: {
           associate: models => {
-            models.User.hasMany(models.Thermostat)
-            models.User.hasMany(models.CoolingProfile)
+            models.CoolingProfile.belongsTo(models.User)
           }
         }
       }
@@ -24,10 +23,6 @@ module.exports = class User extends Model {
   static schema (app, Sequelize) {
     return {
       name: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      emailAddress: {
         type: Sequelize.STRING,
         allowNull: false
       }
