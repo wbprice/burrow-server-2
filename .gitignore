@@ -1,6 +1,7 @@
 node_modules
 coverage
 .tmp/*
+.DS_STORE
 
 # Ignore Vim temporary files.
 *~
