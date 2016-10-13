@@ -18,7 +18,10 @@
   ],
   "dependencies": {
     "bcrypt": "^0.8.7",
+    "hapi-react-views": "^9.2.0",
     "jsonwebtoken": "^7.1.9",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
     "sqlite3": "^3.1.6",
     "trailpack-core": "^1.0.0-beta-3",
     "trailpack-footprints": "^1.0.1",

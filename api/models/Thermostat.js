@@ -9,17 +9,7 @@ const Model = require('trails-model')
 module.exports = class Thermostat extends Model {
 
   static config () {
-    return {
-      options: {
-        classMethods: {
-          associate: models => {
 
-            models.Thermostat.belongsTo(models.User)
-
-          }
-        }
-      }
-    }
   }
 
   static schema (app, Sequelize) {

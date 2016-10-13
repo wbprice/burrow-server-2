@@ -13,8 +13,8 @@ module.exports = class User extends Model {
       options: {
         classMethods: {
           associate: models => {
-            models.User.hasMany(models.Thermostat)
-            models.User.hasMany(models.CoolingProfile)
+            models.User.hasMany(models.Thermostat, {as: 'Thermostats'})
+            models.User.hasMany(models.CoolingProfile, {as: 'CoolingProfiles'})
           }
         }
       }
@@ -23,14 +23,17 @@ module.exports = class User extends Model {
 
   static schema (app, Sequelize) {
     return {
+
       name: {
         type: Sequelize.STRING,
         allowNull: false
       },
+
       emailAddress: {
         type: Sequelize.STRING,
         allowNull: false
       }
+
     }
   }
 

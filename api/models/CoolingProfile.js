@@ -9,15 +9,7 @@ const Model = require('trails-model')
 module.exports = class CoolingProfile extends Model {
 
   static config () {
-    return {
-      options: {
-        classMethods: {
-          associate: models => {
-            models.CoolingProfile.belongsTo(models.User)
-          }
-        }
-      }
-    }
+
   }
 
   static schema (app, Sequelize) {

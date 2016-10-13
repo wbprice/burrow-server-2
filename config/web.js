@@ -1,3 +1,5 @@
+const path = require('path')
+
 /**
  * Server Configuration
  * (app.config.web)
@@ -16,5 +18,36 @@ module.exports = {
   /**
    * The host to bind the web server to
    */
-  host: process.env.HOST || '0.0.0.0'
+  host: process.env.HOST || '0.0.0.0',
+
+  plugins: [
+    {
+      register: require('vision'),
+      options: {}
+    },
+    {
+      register: require('inert'),
+      options: {}
+    }
+  ],
+
+  onPluginsLoaded: err => {
+
+    if (err) this.log.info(err)
+
+    this.packs.hapi.server.views({
+      engines: {
+        js: require('hapi-react-views')
+      },
+      relativeTo: __dirname,
+      path: path.join(__dirname, '..', 'dist', 'components', 'environments'),
+      compileOptions: {
+        renderMethod: 'renderToString',
+        layoutPath: path.join(__dirname, '..', 'dist', 'components'),
+        layout: 'layout'
+      }
+    })
+
+  }
+
 }
