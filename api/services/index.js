@@ -2,4 +2,4 @@
 
 exports.DefaultService = require('./DefaultService')
 exports.UserService = require('./UserService')
-exports.LoginService = require('./LoginService')
+exports.AuthService = require('./AuthService')

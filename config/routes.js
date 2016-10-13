@@ -38,7 +38,7 @@ module.exports = [
   {
     method: ['POST'],
     path: '/login',
-    handler: 'LoginController.login'
+    handler: 'AuthController.login'
   }
 
 ]

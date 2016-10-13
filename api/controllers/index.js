@@ -3,4 +3,4 @@
 exports.DefaultController = require('./DefaultController')
 exports.ViewController = require('./ViewController')
 exports.UserController = require('./UserController')
-exports.LoginController = require('./LoginController')
+exports.AuthController = require('./AuthController')
