@@ -31,9 +31,7 @@ module.exports = {
     }
   ],
 
-  onPluginsLoaded: err => {
-
-    if (err) this.log.info(err)
+  onPluginsLoaded: function(err) {
 
     this.packs.hapi.server.views({
       engines: {
@@ -44,7 +42,7 @@ module.exports = {
       compileOptions: {
         renderMethod: 'renderToString',
         layoutPath: path.join(__dirname, '..', 'dist', 'components'),
-        layout: 'layout'
+        layout: 'Layout'
       }
     })
 
