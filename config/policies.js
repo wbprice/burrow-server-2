@@ -16,6 +16,10 @@ module.exports = {
 
   DefaultController: {
     info: [ ]
+  },
+
+  ThermostatController: {
+    create: ['Auth.auth']
   }
 
 }

@@ -39,6 +39,12 @@ module.exports = [
     method: ['POST'],
     path: '/login',
     handler: 'AuthController.login'
+  },
+
+  {
+    method: ['POST'],
+    path: '/api/v1/thermostat',
+    handler: 'ThermostatController.create'
   }
 
 ]
