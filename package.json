@@ -17,6 +17,7 @@
     "trailsjs"
   ],
   "dependencies": {
+    "bcrypt": "^0.8.7",
     "sqlite3": "^3.1.6",
     "trailpack-core": "^1.0.0-beta-3",
     "trailpack-footprints": "^1.0.1",

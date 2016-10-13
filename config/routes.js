@@ -33,7 +33,12 @@ module.exports = [
     method: ['POST'],
     path: '/api/v1/user',
     handler: 'UserController.create'
-  }
+  },
 
+  {
+    method: ['POST'],
+    path: '/login',
+    handler: 'LoginController.login'
+  }
 
 ]
