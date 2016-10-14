@@ -19,7 +19,7 @@ module.exports = class AuthController extends Controller{
     .then(user => {
       if (user) {
         request.yar.set('user', user);
-        reply(user)
+        reply.redirect('/')
       }
       else {
         reply(Boom.unauthorized('That email address or password doesn\'t exist'))
