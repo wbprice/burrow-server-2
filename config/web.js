@@ -28,6 +28,16 @@ module.exports = {
     {
       register: require('inert'),
       options: {}
+    },
+    {
+      register: require('yar'),
+      options: {
+        storeBlank: false,
+        cookieOptions: {
+          password: process.env['JWT_SECRET_KEY'],
+          isSecure: true
+        }
+      }
     }
   ],
 

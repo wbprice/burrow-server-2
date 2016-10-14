@@ -16,12 +16,13 @@ module.exports = class AuthController extends Controller{
     const password = request.payload.password
 
     this.app.services.AuthService.login(emailAddress, password)
-    .then(jwt => {
-      if (jwt) {
-        reply({jwt})
+    .then(user => {
+      if (user) {
+        request.yar.set('user', { user });
+        reply()
       }
       else {
-        reply(Boom.unauthorized('Bad username or password.'))
+        reply(Boom.unauthorized('That email address or password doesn\'t exist'))
       }
     })
     .catch(err => {
