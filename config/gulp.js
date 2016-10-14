@@ -25,12 +25,12 @@ module.exports = {
   tasks: {
     default: ['compileTemplate', 'compileStyles'],
     compileTemplate: () => {
-      return gulp.src('./assets/js/**/*.js')
+      return gulp.src('./frontend/js/**/*.js')
         .pipe(babel(babelConfig))
         .pipe(gulp.dest('dist'))
     },
     compileStyles: () => {
-      return gulp.src('./assets/styles/**/*.scss')
+      return gulp.src('./frontend/styles/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('dist'))
     }

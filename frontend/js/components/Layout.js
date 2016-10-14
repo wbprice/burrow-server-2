@@ -13,6 +13,14 @@ class Layout extends Component {
 
         <body>
 
+          <div id="app-mount"
+            dangerouslySetInnerHTML={{ __html: this.props.children }}>
+          </div>
+
+          <script id="app-state"
+            dangerouslySetInnerHTML={{ __html: this.props.state }}>
+          </script>
+
         </body>
 
       </html>
