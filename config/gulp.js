@@ -3,6 +3,7 @@
 const gulp = require('gulp')
 const babel = require('gulp-babel')
 const sass = require('gulp-sass')
+const path = require('path')
 
 const babelConfig = {
   presets: ['react', 'es2015'],
@@ -31,7 +32,11 @@ module.exports = {
     },
     compileStyles: () => {
       return gulp.src('./frontend/styles/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(
+          sass({
+            includePaths: [ 'node_modules' ]
+          })
+          .on('error', sass.logError))
         .pipe(gulp.dest('dist'))
     }
   }
