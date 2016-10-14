@@ -35,7 +35,7 @@ module.exports = {
         storeBlank: false,
         cookieOptions: {
           password: process.env['JWT_SECRET_KEY'],
-          isSecure: true
+          isSecure: false
         }
       }
     }

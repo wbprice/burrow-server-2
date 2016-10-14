@@ -12,8 +12,9 @@ module.exports = class ThermostatController extends Controller{
 
   create(request, reply) {
 
+    const user = request._user
+    const emailAddress = user.emailAddress 
     const thermostat = request.payload
-    const emailAddress = request.headers.jwt.emailAddress
 
     this.app.services.ThermostatService.create(thermostat, emailAddress)
     .then(response => {

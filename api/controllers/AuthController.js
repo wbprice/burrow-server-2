@@ -18,8 +18,8 @@ module.exports = class AuthController extends Controller{
     this.app.services.AuthService.login(emailAddress, password)
     .then(user => {
       if (user) {
-        request.yar.set('user', { user });
-        reply()
+        request.yar.set('user', user);
+        reply(user)
       }
       else {
         reply(Boom.unauthorized('That email address or password doesn\'t exist'))

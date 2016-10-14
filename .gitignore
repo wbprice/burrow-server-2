@@ -3,6 +3,7 @@ coverage
 env_vars
 .tmp/*
 .DS_STORE
+dist
 
 # Ignore Vim temporary files.
 *~

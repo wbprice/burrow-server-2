@@ -10,11 +10,18 @@ module.exports = class ThermostatService extends Service {
 
   create(thermostat, emailAddress) {
 
-    return this.app.orm.User.findOne({where: {emailAddress}})
+    return this.app.orm.User.findOne({
+      where: {emailAddress},
+      include: [{ all: true }]
+    })
     .then(user => {
       return this.app.orm.Thermostat.create(thermostat)
       .then(thermostat => {
-        return user.setThermostats([thermostat])
+        return user.addThermostats(
+          thermostat
+        ).then(() => {
+          return thermostat
+        })
       })
     })
 

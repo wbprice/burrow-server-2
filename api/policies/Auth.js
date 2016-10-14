@@ -15,10 +15,8 @@ module.exports = class AuthPolicy extends Policy {
 
     const user = request.yar.get('user')
 
-    console.log('user', user)
-
     if (user) {
-      console.log('user')
+      request._user = user
       reply()
     }
     else {
