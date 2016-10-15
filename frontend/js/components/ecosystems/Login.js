@@ -12,7 +12,7 @@ class Login extends Component {
           <legend>Login to continue</legend>
           { 
             this.props.error &&
-            <label>{this.props.error}</label>
+            <label className="errortext">{this.props.error}</label>
           }
             
           <label htmlFor="emailAddress">Email</label>
@@ -29,11 +29,12 @@ class Login extends Component {
             name="password"
             placeholder="Password" />
 
-          <button 
-            className="button-primary"
-            type="submit">Sign in</button>
-
         </fieldset>
+
+        <button 
+          className="button-primary"
+          type="submit">Sign in</button>
+
       </form>
     )
   }
