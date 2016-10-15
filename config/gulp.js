@@ -37,7 +37,7 @@ module.exports = {
             includePaths: [ 'node_modules' ]
           })
           .on('error', sass.logError))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/styles'))
     }
   }
 

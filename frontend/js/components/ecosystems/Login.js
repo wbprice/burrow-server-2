@@ -5,6 +5,7 @@ class Login extends Component {
   render() {
     return (
       <form
+        className="bordered-form"
         method="post"
         action="/login">
         <fieldset>
@@ -24,7 +25,9 @@ class Login extends Component {
             name="password"
             placeholder="Password" />
 
-          <button type="submit">Sign in</button>
+          <button 
+            className="button-primary"
+            type="submit">Sign in</button>
 
         </fieldset>
       </form>

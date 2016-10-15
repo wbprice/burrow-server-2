@@ -1,5 +1,7 @@
 import React, { PropTypes, Component } from 'react'
 
+import Header from './ecosystems/Header'
+
 class Layout extends Component {
 
   render() {
@@ -9,10 +11,14 @@ class Layout extends Component {
         <head>
           <title>Burrow</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="stylesheet" href="/dist/base.css" />
+          <link rel="stylesheet" href="/dist/styles/style.css" />
+          <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" />
+
         </head>
 
         <body>
+
+          <Header />
 
           <div id="app-mount"
             dangerouslySetInnerHTML={{ __html: this.props.children }}>
