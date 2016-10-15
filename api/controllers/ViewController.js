@@ -15,10 +15,12 @@ module.exports = class ViewController extends Controller {
     }
     // Else, redirect to login screen.
     else {
-      reply.view('Login')
+      reply.redirect('/login')
     }
   }
 
-  
+  login (request, reply) {
+    reply.view('login')
+  }
 
 }

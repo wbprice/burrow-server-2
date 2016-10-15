@@ -9,7 +9,7 @@ class Home extends Component {
   render() {
     return (
       <section>
-        <Login />
+        <Login error={this.props.error} />
       </section>
     )
   }
@@ -17,7 +17,7 @@ class Home extends Component {
 }
 
 Home.propTypes = {
-  thermostats: PropTypes.array
+  error: PropTypes.string
 }
 
 export default Home

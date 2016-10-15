@@ -22,7 +22,7 @@ module.exports = class AuthService extends Service {
 
       return new Promise((resolve, reject) => {
         bcrypt.compare(password, login.password, (err, isValid) => {
-          if (err) reject(err)
+          if (err) resolve(false)
 
           if (isValid) {
             resolve(user)

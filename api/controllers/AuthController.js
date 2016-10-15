@@ -22,7 +22,7 @@ module.exports = class AuthController extends Controller{
         reply.redirect('/')
       }
       else {
-        reply(Boom.unauthorized('That email address or password doesn\'t exist'))
+        reply.view('Login', {error: 'That email address or password doesn\'t exist'})
       }
     })
     .catch(err => {

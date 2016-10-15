@@ -10,7 +10,11 @@ class Login extends Component {
         action="/login">
         <fieldset>
           <legend>Login to continue</legend>
-       
+          { 
+            this.props.error &&
+            <label>{this.props.error}</label>
+          }
+            
           <label htmlFor="emailAddress">Email</label>
           <input
             id="emailAddress"
@@ -34,6 +38,10 @@ class Login extends Component {
     )
   }
   
+}
+
+Login.propTypes = {
+  error: PropTypes.string
 }
 
 export default Login

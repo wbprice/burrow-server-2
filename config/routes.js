@@ -20,6 +20,12 @@ module.exports = [
     handler: 'ViewController.home'
   },
 
+  {
+    method: 'GET',
+    path: '/login',
+    handler: 'ViewController.login'
+  },
+
   /**
    * Constrain the DefaultController.info handler to accept only GET requests.
    */
