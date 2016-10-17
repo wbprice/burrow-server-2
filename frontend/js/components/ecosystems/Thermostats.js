@@ -1,5 +1,7 @@
 import React, { PropTypes, Component } from 'react'
 
+import Thermostat from './../organisms/Thermostat'
+
 class Thermostats extends Component {
 
   render() {
@@ -8,9 +10,12 @@ class Thermostats extends Component {
       <section>
         { this.props.thermostats.map((thermostat, index) => {
             return (
-              <section key={index}>
-                <pre>Thermostat {thermostat.name}</pre>
-              </section>
+              <Thermostat
+                key={index}
+                index={index}
+                name={thermostat.name}
+                temperature={thermostat.temperature}
+                id={thermostat.id} />
             )
           })
         }

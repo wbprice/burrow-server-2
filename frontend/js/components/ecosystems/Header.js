@@ -6,7 +6,11 @@ class Header extends Component {
 
     return (
       <header className="top-header">
-        <h1>Burrow</h1>
+        <div className="container">
+          <div className="twelve columns">
+            <h1>Burrow</h1>
+          </div>
+        </div>
       </header>
     )
 
@@ -17,4 +21,3 @@ class Header extends Component {
 Header.propTypes = {}
 
 export default Header
-

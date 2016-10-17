@@ -20,13 +20,15 @@ class Layout extends Component {
 
           <Header />
 
-          <div id="app-mount"
-            dangerouslySetInnerHTML={{ __html: this.props.children }}>
-          </div>
+          <section className="container">
+            <div id="app-mount"
+              dangerouslySetInnerHTML={{ __html: this.props.children }}>
+            </div>
 
-          <script id="app-state"
-            dangerouslySetInnerHTML={{ __html: this.props.state }}>
-          </script>
+            <script id="app-state"
+              dangerouslySetInnerHTML={{ __html: this.props.state }}>
+            </script>
+          </section>
 
         </body>
 

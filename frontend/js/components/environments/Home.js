@@ -11,8 +11,12 @@ class Home extends Component {
   render() {
     return (
       <section>
-        <CreateThermostat />
-        <Thermostats thermostats={this.props.thermostats} />
+        <div className="four columns">
+          <CreateThermostat />
+        </div>
+        <div className="eight columns">
+          <Thermostats thermostats={this.props.thermostats} />
+        </div>
       </section>
     )
   }
