@@ -31,4 +31,11 @@ module.exports = class AuthController extends Controller{
 
   }
 
+  logout(request, reply) {
+    
+    request.yar.clear('user')
+    reply.redirect('/')
+
+  }
+
 }

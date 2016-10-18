@@ -10,7 +10,10 @@ module.exports = class ViewController extends Controller {
     if (user) {
       this.app.orm.Thermostat.findAll({where: {UserId: user.id}})
       .then(thermostats => {
-        reply.view('Home', {thermostats: thermostats})
+        reply.view('Home', {
+          thermostats: thermostats,
+          username: user.name
+        })
       })
     }
     // Else, redirect to login screen.

@@ -48,6 +48,12 @@ module.exports = [
   },
 
   {
+    method: 'GET',
+    path: '/logout',
+    handler: 'AuthController.logout'
+  },
+
+  {
     method: ['POST'],
     path: '/api/v1/thermostat',
     handler: 'ThermostatController.create'

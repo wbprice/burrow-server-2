@@ -7,7 +7,7 @@ class Thermostats extends Component {
   render() {
 
     return (
-      <section>
+      <section className="thermostats">
         { this.props.thermostats.map((thermostat, index) => {
             return (
               <Thermostat

@@ -1,0 +1,20 @@
+@import 'colors';
+
+.sidebar {
+  position: fixed;
+  width: 250px;
+
+  header {
+    margin-bottom: 1em;
+
+    h1 {
+      font-size: 1.5em;
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+  }
+
+}
