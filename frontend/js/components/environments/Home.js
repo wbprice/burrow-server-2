@@ -11,10 +11,10 @@ class Home extends Component {
   render() {
     return (
       <section>
-        <div className="four columns">
+        <div className="five columns">
           <CreateThermostat />
         </div>
-        <div className="eight columns">
+        <div className="seven columns">
           <Thermostats thermostats={this.props.thermostats} />
         </div>
       </section>

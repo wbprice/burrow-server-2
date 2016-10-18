@@ -5,6 +5,7 @@ class CreateThermostat extends Component {
   render() {
     return (
       <form
+        className="bordered-form"
         method="post"
         action="/api/v1/thermostat">
 

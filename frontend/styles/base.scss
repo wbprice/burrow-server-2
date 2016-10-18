@@ -1,5 +1,9 @@
 @import 'colors';
 
+* {
+  box-sizing: border-box;
+}
+
 body, label, h1, h2, h3, h4, h5 {
   font-family: Lato, Helvetica, arial, sans-serif;
 }
@@ -15,7 +19,7 @@ body {
 }
 
 .container {
-  max-width: 720px;
+  max-width: 580px;
   margin: 0 auto;
 }
 
