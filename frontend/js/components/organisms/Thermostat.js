@@ -1,6 +1,7 @@
 import React, { PropTypes, Component } from 'react'
 
 import Hexagon from './../atoms/Hexagon'
+import EditButton from './../molecules/EditButton'
 
 class Thermostat extends Component {
 
@@ -20,7 +21,10 @@ class Thermostat extends Component {
           <input type="hidden" name="_method" value="PUT"/>
 
           <fieldset className="temperature">
-            <legend>{this.props.name} Temp.</legend>
+            <div className="thermostat-name">
+              <legend>{this.props.name}</legend>
+              <EditButton href={`/edit/thermostat/${this.props.id}`}/>
+            </div>
             <input
               value={this.props.temperature}
               id="temperature"
