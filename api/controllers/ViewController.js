@@ -4,6 +4,26 @@ const Controller = require('trails-controller')
 
 module.exports = class ViewController extends Controller {
 
+  home (request, reply) {
+    
+    const user = request.yar.get('user')
+    if (user) {
+      const id = request.params.id
+      this.app.orm.Thermostat.findAll({where: {UserId: user.id}})
+      .then(thermostats => {
+        reply.view('Home', {
+          thermostats: thermostats,
+          thermostatId: id,
+          username: user.name
+        })
+      })
+    }
+    else {
+      reply.redirect('/login')
+    } 
+
+  }
+
   thermostats (request, reply) {
     const user = request.yar.get('user')
     if (user) {

@@ -17,6 +17,12 @@ module.exports = [
   {
     method: 'GET',
     path: '/',
+    handler: 'ViewController.home'
+  },
+
+  {
+    method: 'GET',
+    path: '/thermostat/',
     handler: 'ViewController.thermostats'
   },
 
