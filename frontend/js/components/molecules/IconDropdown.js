@@ -11,9 +11,10 @@ class IconDropdown extends Component {
         <div className="row">
           <ClockIcon />
           <select>
-            <option value="value1">Value 1</option>
-            <option value="value2" selected>Value 2</option>
-            <option value="value3">Value 3</option>
+            <option value="home">Home</option>
+            <option value="work" selected>Work</option>
+            <option value="coffeeshop">Coffeeshop</option>
+            <option vlaue="sleeping">Sleeping</option>
           </select>
         </div>
       </div>

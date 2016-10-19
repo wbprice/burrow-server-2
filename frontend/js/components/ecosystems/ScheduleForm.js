@@ -11,9 +11,7 @@ class Schedule extends Component {
           action=""
           method="post">
 
-          <IconDropdown 
-            label="Schedule"   
-          />
+          <IconDropdown label="Cooling Profile" />
 
         </form>
       </section>
