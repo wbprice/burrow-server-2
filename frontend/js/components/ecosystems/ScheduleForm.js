@@ -13,6 +13,8 @@ class Schedule extends Component {
 
           <IconDropdown label="Cooling Profile" />
 
+          <button className="button-primary">Submit</button>
+
         </form>
       </section>
     )
