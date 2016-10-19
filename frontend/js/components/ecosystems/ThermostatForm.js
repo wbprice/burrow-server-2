@@ -6,6 +6,8 @@ import React, { PropTypes, Component } from 'react'
  * Otherwise, update the existing thermostat.
  */
 
+import HR from './../atoms/HR'
+
 class ThermostatForm extends Component {
 
   render() {
@@ -19,41 +21,65 @@ class ThermostatForm extends Component {
     }
 
     return (
-      <form
-        className="bordered-form"
-        method="post"
-        action={action}>
+      <section className="bordered-form">
+        <form
+          method="post"
+          action={action}>
 
-        <fieldset>
-          <legend>{legend}</legend>
+          <fieldset>
+            <legend>{legend}</legend>
 
-          <label htmlFor="name">Name</label>
-          <input 
-            id="name"
-            type="text"
-            name="name"
-            value={this.props.thermostat && this.props.thermostat.name}
-            required
-            placeholder="Living Room" />
+            <input type="hidden" name="_frontend" value="true" />
+            <input type="hidden" name="_method" value={
+              this.props.thermostat ? 'put' : 'post'
+            } />
 
-          <label htmlFor="temperature">Temperature</label>
-          <input 
-            id="temperature"
-            type="number"
-            name="temperature"
-            min="68"
-            max="84"
-            value={this.props.thermostat && this.props.thermostat.temperature}
-            required
-            placeholder="78" />
+            <label htmlFor="temperature">Temperature</label>
+            <input 
+              id="temperature"
+              type="number"
+              name="temperature"
+              min="68"
+              max="84"
+              value={this.props.thermostat && this.props.thermostat.temperature}
+              required
+              placeholder="78" />
 
-        </fieldset>
+            <label htmlFor="name">Name</label>
+            <input 
+              id="name"
+              type="text"
+              name="name"
+              value={this.props.thermostat && this.props.thermostat.name}
+              required
+              placeholder="Living Room" />
 
-        <button 
-          className="button-primary"
-          type="submit">Submit</button>
+          </fieldset>
 
-      </form>
+          <button 
+            className="button-primary"
+            type="submit">Submit</button>
+
+        </form>
+
+        {
+          this.props.thermostat &&
+            <form 
+              method="post"
+              action={`/api/v1/thermostat/${this.props.thermostat.id}`}> 
+
+              <input type="hidden" name="_frontend" value="true" />
+              <input type="hidden" name="_method" value="del" />
+                
+              <HR />
+
+              <button
+                className="button-warning"
+                type="submit">Delete</button>
+
+            </form>
+        }
+      </section>
     )
   }
 

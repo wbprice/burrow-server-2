@@ -22,23 +22,14 @@ module.exports = [
 
   {
     method: 'GET',
+    path: '/thermostat/{id}',
+    handler: 'ViewController.thermostats'
+  },
+
+  {
+    method: 'GET',
     path: '/login',
     handler: 'ViewController.login'
-  },
-
-  /**
-   * Constrain the DefaultController.info handler to accept only GET requests.
-   */
-  {
-    method: [ 'GET' ],
-    path: '/api/v1/default/info',
-    handler: 'DefaultController.info'
-  },
-
-  {
-    method: ['POST'],
-    path: '/api/v1/user',
-    handler: 'UserController.create'
   },
 
   {
@@ -53,22 +44,27 @@ module.exports = [
     handler: 'AuthController.logout'
   },
 
+  /**
+   * Constrain the DefaultController.info handler to accept only GET requests.
+   */
+
   {
-    method: 'GET',
-    path: '/thermostat/{id}',
-    handler: 'ViewController.thermostats'
+    method: ['POST'],
+    path: '/api/v1/user',
+    handler: 'UserController.create'
   },
+
 
   {
     method: ['POST'],
     path: '/api/v1/thermostat',
-    handler: 'ThermostatController.create'
+    handler: 'ThermostatController.postDirector'
   },
 
   {
-    method: ['GET'],
+    method: ['POST'],
     path: '/api/v1/thermostat/{id}',
-    handler: 'ThermostatController.findOrUpdate'
+    handler: 'ThermostatController.postDirector'
   }
 
 ]

@@ -16,9 +16,10 @@ class Thermostat extends Component {
         <form
           className="thermostat"
           action={`/api/v1/thermostat/${this.props.id}`}
-          method="GET">
-
-          <input type="hidden" name="_method" value="PUT"/>
+          method="post"> 
+          
+          <input type="hidden" name="_method" value="put"/>
+          <input type="hidden" name="_frontend" value="true" />
 
           <fieldset className="temperature">
             <legend>{this.props.name}</legend>
