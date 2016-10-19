@@ -50,6 +50,7 @@ class Hexagon extends Component {
       height: hexDimensions.height,
       position: 'relative',
       display: 'flex',
+      flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
       marginBottom: -hexDimensions.height / 4 + 12,

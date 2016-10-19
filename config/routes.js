@@ -17,7 +17,7 @@ module.exports = [
   {
     method: 'GET',
     path: '/',
-    handler: 'ViewController.home'
+    handler: 'ViewController.thermostats'
   },
 
   {
@@ -51,6 +51,12 @@ module.exports = [
     method: 'GET',
     path: '/logout',
     handler: 'AuthController.logout'
+  },
+
+  {
+    method: 'GET',
+    path: '/thermostat/{id}',
+    handler: 'ViewController.thermostats'
   },
 
   {

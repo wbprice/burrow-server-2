@@ -16,20 +16,9 @@
     margin: 0;
   }
 
-  .thermostat-name {
+  legend {
     font-size: 1.25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    legend {
-      margin: 0 .5em 0 0;
-    }
-
-    a { 
-      line-height: 1;
-    }
-
+    margin: 0 .5em 0 0;
   }
 
   label[for="temperature"] {
@@ -42,7 +31,7 @@
     font-weight: 700;
   }
 
-  button {
+  .button, button {
     color: $paleyellow;
     border-color: $paleyellow;
   }

@@ -4,14 +4,15 @@ const Controller = require('trails-controller')
 
 module.exports = class ViewController extends Controller {
 
-  home (request, reply) {
-    // If user is logged in, populate the list of thermostats.
+  thermostats (request, reply) {
     const user = request.yar.get('user')
     if (user) {
+      const id = request.params.id
       this.app.orm.Thermostat.findAll({where: {UserId: user.id}})
       .then(thermostats => {
-        reply.view('Home', {
+        reply.view('Thermostat', {
           thermostats: thermostats,
+          thermostatId: id,
           username: user.name
         })
       })

@@ -21,10 +21,7 @@ class Thermostat extends Component {
           <input type="hidden" name="_method" value="PUT"/>
 
           <fieldset className="temperature">
-            <div className="thermostat-name">
-              <legend>{this.props.name}</legend>
-              <EditButton href={`/edit/thermostat/${this.props.id}`}/>
-            </div>
+            <legend>{this.props.name}</legend>
             <input
               value={this.props.temperature}
               id="temperature"
@@ -32,7 +29,11 @@ class Thermostat extends Component {
               name="temperature" />
           </fieldset>
 
-          <button type="submit">Update</button>
+          <a
+            className="button"
+            href={`/thermostat/${this.props.id}`}>
+            Edit
+          </a>
 
         </form>
 
