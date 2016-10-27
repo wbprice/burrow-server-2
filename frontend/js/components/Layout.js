@@ -18,7 +18,8 @@ class Layout extends Component {
 
         <body>
 
-          <section className="container">
+          <section className="app-container">
+
             <div id="app-mount"
               dangerouslySetInnerHTML={{ __html: this.props.children }}>
             </div>

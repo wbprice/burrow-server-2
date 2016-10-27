@@ -2,14 +2,23 @@
 
 import React, { PropTypes, Component } from 'react'
 
-import Login from './../ecosystems/Login'
+import Header from './../ecosystems/Header'
+import LoginForm from './../ecosystems/LoginForm'
 
 class Home extends Component {
 
   render() {
     return (
       <section>
-        <Login error={this.props.error} />
+        <Header />
+        <div className="container">
+          <div className="five columns">
+            <LoginForm error={this.props.error} />
+          </div>
+          <div className="seven columns">
+            <p>Marketing material</p>
+          </div>
+        </div>
       </section>
     )
   }

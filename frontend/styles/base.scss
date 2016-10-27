@@ -9,18 +9,17 @@ body, label, h1, h2, h3, h4, h5 {
 }
 
 body {
-  margin-top: 48px;
-  padding: 0 1em 1em 1em;
+  padding: 1em;
   background: $paleryellow;
+}
+
+.container {
+  padding: 0;
+  max-width: 720px;
 }
 
 .errortext {
   color: $red;
-}
-
-.container {
-  max-width: 580px;
-  margin: 0 auto;
 }
 
 #app-mount {
