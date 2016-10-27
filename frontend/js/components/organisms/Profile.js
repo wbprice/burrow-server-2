@@ -4,14 +4,14 @@ class Profile extends Component {
 
   render() {
     return (
-      <section>
+      <section className="profile">
         { this.props.username &&
-          <p>Logged in as: <b>{this.props.username}</b>{' '}
-             <a href="/logout">Logout</a></p> }
+          <span>Logged in as: <b>{this.props.username}</b>{' '}
+             <a href="/logout">Logout</a></span> }
       </section>
     )
   }
-      
+
 }
 
 Profile.propTypes = {

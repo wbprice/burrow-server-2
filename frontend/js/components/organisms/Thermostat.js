@@ -10,14 +10,14 @@ class Thermostat extends Component {
     return (
       <Hexagon
         index={this.props.index}
-        size={125}
+        size={112}
         temperature={this.props.temperature}>
 
         <form
           className="thermostat"
           action={`/api/v1/thermostat/${this.props.id}`}
-          method="post"> 
-          
+          method="post">
+
           <input type="hidden" name="_method" value="put"/>
           <input type="hidden" name="_frontend" value="true" />
 

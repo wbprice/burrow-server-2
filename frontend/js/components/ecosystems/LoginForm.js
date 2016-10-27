@@ -1,8 +1,8 @@
 import React, { PropTypes, Component } from 'react'
 
-import Sidebar from './../ecosystems/Sidebar' 
+import Sidebar from './../ecosystems/Sidebar'
 
-class Login extends Component {
+class LoginForm extends Component {
 
   render() {
     return (
@@ -13,11 +13,11 @@ class Login extends Component {
           action="/login">
           <fieldset>
             <legend>Login to continue</legend>
-            { 
+            {
               this.props.error &&
               <label className="errortext">{this.props.error}</label>
             }
-              
+
             <label htmlFor="emailAddress">Email</label>
             <input
               id="emailAddress"
@@ -34,7 +34,7 @@ class Login extends Component {
 
           </fieldset>
 
-          <button 
+          <button
             className="button-primary"
             type="submit">Sign in</button>
 
@@ -42,12 +42,11 @@ class Login extends Component {
       </Sidebar>
     )
   }
-  
+
 }
 
-Login.propTypes = {
+LoginForm.propTypes = {
   error: PropTypes.string
 }
 
-export default Login
-
+export default LoginForm

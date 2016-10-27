@@ -1,15 +1,17 @@
 import React, { PropTypes, Component } from 'react'
+import Profile from './../organisms/Profile'
 
 class Header extends Component {
 
   render() {
 
     return (
-      <header className="top-header">
-        <div className="container">
-          <div className="twelve columns">
-            <h1>Burrow</h1>
-          </div>
+      <header className="top-header container">
+        <div className="five columns">
+          <h1>Burrow</h1>
+        </div>
+        <div className="seven columns">
+          <Profile username={this.props.username} />
         </div>
       </header>
     )
@@ -18,6 +20,8 @@ class Header extends Component {
 
 }
 
-Header.propTypes = {}
+Header.propTypes = {
+  username: PropTypes.string
+}
 
 export default Header
