@@ -1,0 +1,17 @@
+@import 'colors';
+
+form.icon-button {
+  margin-bottom: 0;
+  display: flex;
+
+  button {
+    display: flex;
+    align-items: center;
+    border-color: $darkgray;
+    border-width: 2px;
+    display: flex;
+    padding: 0 6px;
+    margin: 6px 0;
+  }
+
+}

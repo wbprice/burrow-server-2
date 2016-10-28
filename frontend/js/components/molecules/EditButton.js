@@ -6,9 +6,13 @@ class EditButton extends Component {
 
   render() {
     return (
-      <a href={this.props.href}>
-        <EditIcon />
-      </a>
+      <form
+        className="icon-button"
+        action={this.props.href} method="GET">
+          <button>
+            <EditIcon />
+          </button>
+      </form>
     )
 
   }
