@@ -3,7 +3,6 @@ import React, { Component, PropTypes } from 'react'
 import Header from './../ecosystems/Header'
 import ThermostatForm from './../ecosystems/ThermostatForm'
 import Thermostats from './../ecosystems/Thermostats'
-import Sidebar from './../ecosystems/Sidebar'
 
 class Thermostat extends Component {
 
@@ -12,18 +11,20 @@ class Thermostat extends Component {
     return (
       <section>
         <Header username={this.props.username}/>
-        <div className="container">
-          <div className="five columns">
-            <ThermostatForm thermostat={
-              this.props.thermostats.find(thermostat => {
-                return thermostat.id == this.props.thermostatId
-              })
-            } />
+          <div className="container">
+            <div className="five columns">
+              <ThermostatForm thermostat={
+                this.props.thermostats.find(thermostat => {
+                  return thermostat.id == this.props.thermostatId
+                })
+              } />
+            </div>
+            <div className="seven columns">
+              <Thermostats
+                creatingThermostat={this.props.creatingThermostat}
+                thermostats={this.props.thermostats} />
+            </div>
           </div>
-          <div className="seven columns">
-            <Thermostats thermostats={this.props.thermostats} />
-          </div>
-        </div>
       </section>
     )
   }
@@ -33,7 +34,8 @@ class Thermostat extends Component {
 Thermostat.propTypes = {
   username: PropTypes.string,
   thermostats: PropTypes.array,
-  thermostatId: PropTypes.number
+  thermostatId: PropTypes.number,
+  creatingThermostat: PropTypes.bool
 }
 
 export default Thermostat

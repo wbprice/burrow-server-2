@@ -11,48 +11,61 @@
     border-color: $paleyellow;
   }
 
-  .temperature {
+}
+
+.temperature {
+  text-align: center;
+  margin-bottom: .5em;
+
+  input, fieldset, label {
+    width: 100%;
     text-align: center;
-    margin-bottom: .5em;
+    margin: 0;
+  }
 
-    input, fieldset, label {
-      width: 100%;
-      text-align: center;
-      margin: 0;
-    }
+  input {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
 
-    input {
-      background-color: transparent;
-      border: none;
-      box-shadow: none;
-    }
+  input:focus {
+    outline: none;
+  }
 
-    input:focus {
-      outline: none;
-    }
+  input[name="temperature"] {
+    font-size: 4em;
+    height: .825em;
+    margin: 0;
+    font-weight: 700;
+  }
 
-    input[name="temperature"] {
-      font-size: 5em;
-      height: .825em;
-      margin: 0;
-      font-weight: 700;
-    }
-
-    input[name="name"] {
-      font-size: 1em;
-      height: .825em;
-      margin: 0;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
+  input[name="name"] {
+    font-size: 1em;
+    height: .825em;
+    width: 50%;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
 }
 
-.indicators {
-  position: absolute;
-  left: 105%;
-  top: 22%;
-  align-self: flex-start;
+.label-tray {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  label {
+    width: auto;
+  }
+
+  .icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+  }
+
 }

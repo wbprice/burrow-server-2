@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react'
+import colors from './../util/colors'
 
 import EditIcon from './../atoms/EditIcon'
 
@@ -6,13 +7,9 @@ class EditButton extends Component {
 
   render() {
     return (
-      <form
-        className="icon-button"
-        action={this.props.href} method="GET">
-          <button>
-            <EditIcon />
-          </button>
-      </form>
+      <a className="icon-button" href={this.props.href}>
+        <EditIcon color={colors.paleyellow} />
+      </a>
     )
 
   }

@@ -16,40 +16,36 @@ input[type="password"]:focus {
 
 form {
 
-  legend {
+  legend, label {
     text-transform: uppercase;
     letter-spacing: 1px;
   }
 
 }
 
-button {
+.button-primary {
+  background-color: $darkerblue !important;
+  border-color: $darkerblue !important;
+  color: $paleryellow !important;
+}
 
-  &.button-primary {
-    background-color: $darkerblue;
-    border-color: $darkerblue;
-    color: $paleryellow;
-  }
+.button-primary:focus,
+.button-primary:hover {
+  background-color: $darkblue !important;
+  border-color: $darkblue !important;
+}
 
-  &.button-primary:focus,
-  &.button-primary:hover {
-    background-color: $darkblue;
-    border-color: $darkblue;
-  }
+.button-warning {
+  background-color: $red;
+  border-color: $red;
+  color: $paleryellow;
+}
 
-  &.button-warning {
-    background-color: $red;
-    border-color: $red;
-    color: $paleryellow;
-  }
-
-  &.button-warning:focus,
-  &.button-warning:hover {
-    background-color: lighten($red, 10%);
-    border-color: lighten($red, 10%);
-    color: $white;
-  }
-
+.button-warning:focus,
+.button-warning:hover {
+  background-color: lighten($red, 10%);
+  border-color: lighten($red, 10%);
+  color: $white;
 }
 
 .bordered-form {

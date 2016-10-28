@@ -5,6 +5,7 @@ const Controller = require('trails-controller')
 module.exports = class ViewController extends Controller {
 
   thermostats (request, reply) {
+
     const user = request.yar.get('user')
     if (user) {
       const id = request.params.id
@@ -13,7 +14,8 @@ module.exports = class ViewController extends Controller {
         reply.view('Thermostat', {
           thermostats: thermostats,
           thermostatId: id,
-          username: user.name
+          username: user.name,
+          creatingThermostat: request.query.creatingThermostat
         })
       })
     }

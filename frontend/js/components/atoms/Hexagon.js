@@ -19,7 +19,7 @@ class Hexagon extends Component {
       return colors.red
     }
     else {
-      return colors.lightgray
+      return 'transparent'
     }
 
   }
@@ -44,6 +44,7 @@ class Hexagon extends Component {
   render() {
 
     const hexDimensions = this.getDimensions(this.props.size)
+    const hexColor = this.getBackgroundColor(this.props.temperature)
 
     const containerStyle = {
       width: hexDimensions.width,
@@ -63,10 +64,10 @@ class Hexagon extends Component {
     }
 
     const hexStyle = {
-      fill: this.getBackgroundColor(this.props.temperature),
+      fill: hexColor,
       fillOpacity: 1,
       fillRule: 'evenodd',
-      stroke: '#01212b',
+      stroke: hexColor === 'transparent' ? colors.lightgray : colors.darkblue,
       strokeWidth: '16',
       strokeLinecap: 'butt',
       strokeLinejoin: 'miter',

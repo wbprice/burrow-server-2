@@ -29,11 +29,10 @@ class Thermostat extends Component {
               type="number"
               name="temperature" />
 
-            <input
-              value={this.props.name}
-              id="name"
-              type="string"
-              name="name" />
+            <div className="label-tray">
+              <label>{this.props.name}</label>
+              <EditButton href={`/thermostat/${this.props.id}`} />
+            </div>
 
           </fieldset>
 
@@ -41,9 +40,6 @@ class Thermostat extends Component {
 
         </form>
 
-        <div className="indicators">
-          <EditButton href={`/thermostat/${this.props.id}`} />
-        </div>
 
       </Hexagon>
     )
