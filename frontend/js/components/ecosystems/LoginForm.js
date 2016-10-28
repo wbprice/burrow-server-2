@@ -32,7 +32,7 @@ class LoginForm extends Component {
               name="password"
               placeholder="Password" />
 
-          </fieldset>
+           </fieldset>
 
           <button
             className="button-primary"

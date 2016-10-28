@@ -22,21 +22,28 @@ class Thermostat extends Component {
           <input type="hidden" name="_frontend" value="true" />
 
           <fieldset className="temperature">
-            <legend>{this.props.name}</legend>
+
             <input
               value={this.props.temperature}
               id="temperature"
               type="number"
               name="temperature" />
+
+            <input
+              value={this.props.name}
+              id="name"
+              type="string"
+              name="name" />
+
           </fieldset>
 
-          <a
-            className="button"
-            href={`/thermostat/${this.props.id}`}>
-            Edit
-          </a>
+          <button type="submit">Update</button>
 
         </form>
+
+        <div className="indicators">
+          <EditButton href={`/thermostat/${this.props.id}`} />
+        </div>
 
       </Hexagon>
     )
@@ -48,8 +55,7 @@ Thermostat.propTypes = {
   name: PropTypes.string,
   temperature: PropTypes.number,
   index: PropTypes.number,
-  id: PropTypes.number,
-  index: PropTypes.number
+  id: PropTypes.number
 }
 
 export default Thermostat

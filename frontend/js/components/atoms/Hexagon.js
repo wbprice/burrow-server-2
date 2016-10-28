@@ -27,7 +27,7 @@ class Hexagon extends Component {
   getDimensions(size) {
 
     const height = size * 2
-    const verticalDistance = height * (3/4)
+    const verticalDistance = height * (3 / 4)
 
     const width = (Math.sqrt(3) / 2) * height
     const horizontalDistance = width
@@ -50,7 +50,7 @@ class Hexagon extends Component {
       height: hexDimensions.height,
       position: 'relative',
       display: 'flex',
-      flexDirection: 'column',
+      flexDirection: 'horizontal',
       alignItems: 'center',
       justifyContent: 'center',
       marginBottom: -hexDimensions.height / 4 + 12,
@@ -107,7 +107,8 @@ class Hexagon extends Component {
 Hexagon.propTypes = {
   size: PropTypes.number,
   temperature: PropTypes.number,
-  children: PropTypes.any
+  children: PropTypes.any,
+  index: PropTypes.number
 }
 
 export default Hexagon
