@@ -43,7 +43,13 @@ module.exports = class ViewController extends Controller {
   }
 
   login (request, reply) {
-    reply.view('login')
+    const user = request.yar.get('user')
+    if (user) {
+      reply.view('login', {username: user.name})
+    }
+    else {
+      reply.view('login')
+    }
   }
 
 }
