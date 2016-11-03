@@ -7,10 +7,8 @@ class Header extends Component {
 
     return (
       <header className="top-header container">
-        <div className="five columns">
+        <div className="twelve columns">
           <h1>Burrow</h1>
-        </div>
-        <div className="seven columns">
           <Profile username={this.props.username} />
         </div>
       </header>

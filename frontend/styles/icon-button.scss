@@ -1,6 +1,7 @@
 @import 'colors';
 
 form.icon-button {
+
   margin-bottom: 0;
   display: flex;
 
@@ -14,4 +15,10 @@ form.icon-button {
     margin: 6px 0;
   }
 
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
 }

@@ -7,6 +7,7 @@ import React, { PropTypes, Component } from 'react'
  */
 
 import HR from './../atoms/HR'
+import CloseButton from './../molecules/CloseButton'
 
 class ThermostatForm extends Component {
 
@@ -29,13 +30,15 @@ class ThermostatForm extends Component {
           <fieldset>
             <legend>{legend}</legend>
 
+            <CloseButton href="/" />
+
             <input type="hidden" name="_frontend" value="true" />
             <input type="hidden" name="_method" value={
               this.props.thermostat ? 'put' : 'post'
             } />
 
             <label htmlFor="temperature">Temperature</label>
-            <input 
+            <input
               id="temperature"
               type="number"
               name="temperature"
@@ -46,7 +49,7 @@ class ThermostatForm extends Component {
               placeholder="78" />
 
             <label htmlFor="name">Name</label>
-            <input 
+            <input
               id="name"
               type="text"
               name="name"
@@ -56,7 +59,7 @@ class ThermostatForm extends Component {
 
           </fieldset>
 
-          <button 
+          <button
             className="button-primary"
             type="submit">Submit</button>
 
@@ -64,13 +67,13 @@ class ThermostatForm extends Component {
 
         {
           this.props.thermostat &&
-            <form 
+            <form
               method="post"
-              action={`/api/v1/thermostat/${this.props.thermostat.id}`}> 
+              action={`/api/v1/thermostat/${this.props.thermostat.id}`}>
 
               <input type="hidden" name="_frontend" value="true" />
               <input type="hidden" name="_method" value="del" />
-                
+
               <HR />
 
               <button

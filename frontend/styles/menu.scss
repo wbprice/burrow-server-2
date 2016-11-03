@@ -1,0 +1,44 @@
+@import 'colors';
+
+.home-menu {
+  ul {
+    li {
+      list-style: none;
+
+      a {
+        &:hover {
+          background: $lightgray;
+          color: $white !important;
+        }
+
+        color: inherit;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin: 0 .5em 0 .25em;
+        }
+
+      }
+    }
+  }
+}
+
+.stacked-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  label {
+    margin-bottom: -.5em;
+    font-size: .8em;
+    cursor: pointer;
+  }
+
+  span {
+    font-size: 1.125em;
+    color: $darkgray;
+  }
+
+}

@@ -11,7 +11,7 @@ class NewThermostatButton extends Component {
         size={112}>
           <div className="temperature">
             <label style={{marginBottom: '.5em'}}>New Thermostat</label>
-            <a href="/?creatingThermostat=true"
+            <a href="/thermostat/?creatingThermostat=true"
                className="button button-primary">Add</a>
           </div>
       </Hexagon>
